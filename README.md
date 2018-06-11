@@ -31,3 +31,5 @@ Associations:
 * return all students
 * return a student and see all their failed statuses
 * return all boating tests you supervised
+
+Run ruby tools/console.rb to seed
