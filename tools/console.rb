@@ -3,5 +3,6 @@ require_relative '../config/environment.rb'
 def reload
   load 'config/environment.rb'
 end
-
-Pry.start
+asdf = 9
+binding.pry
+puts ''

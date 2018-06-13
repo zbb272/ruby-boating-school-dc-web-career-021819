@@ -25,7 +25,7 @@ Associations:
 'Instructor' class:
 * init with name
 * return all instructors
-* Student.fail_student should take in a student name and test name and return status failed
+* #fail_student should take in a student name and test name and return status failed
 
 
 Run ruby tools/console.rb in console to seed
@@ -38,4 +38,4 @@ spongebob= Student.new("Spongebob", "Squarepants")
 puff= Instructor.new("Ms.Puff")
 krabs= Instructor.new("Mr.Krabs")
 
-test1= patrick.add_boating_test("Don't Crash 101", "pending", puff)
+test1= spongebob.add_boating_test("Don't Crash 101", "pending", puff)
