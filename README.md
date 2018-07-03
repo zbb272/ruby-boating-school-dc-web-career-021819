@@ -40,4 +40,4 @@ krabs= Instructor.new("Mr.Krabs")
 
 test1= spongebob.add_boating_test("Don't Crash 101", "pending", puff)
 
-![](https://github.com/learn-co-students/mod1-code-review-boating-school-dc-web-060418)
+![](https://media.giphy.com/media/GwYxLtDaB3Wso/giphy.gif)
