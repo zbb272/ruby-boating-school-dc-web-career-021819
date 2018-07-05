@@ -1,21 +1,18 @@
 # mod1-code-review-boating-school
 
-Welcome to Boating School!  A Spongebob activity that simulates a system that tracks the Boating Tests happening.  We have three models - 'Student', 'Instructor', and 'BoatingTest'.
+Welcome to Boating School!  A Spongebob activity that simulates a system that tracks Boating Tests.  We have three models - 'Student', 'Instructor', and 'BoatingTest'.
 
 Associations:
 
-* An 'Instructor' has many 'BoatingTests'
+![alt text][chart]
 
-* A 'Student' has many 'BoatingTests'
-
-* A 'BoatingTest' belongs to a 'Student' and an 'Instructor'
+[chart]: https://i.imgur.com/eiFqjJe.png
 
 'Student' class:
-* should initialize with first_name and last_name
+* should initialize with first_name
 * Student.all should return all of the student instances
-* Student.full_names should return an array of all of the students full names
 * Student#add_boating_test should initialize a new boating test with a student (Object), a boating test name (String), a boating test status (String), and an Instructor (Object)
-* Student.find_student will take in a student full name and output that student
+* Student.find_student will take in a student first name and output that student
 
 
 'BoatingTest' class:
@@ -25,17 +22,19 @@ Associations:
 'Instructor' class:
 * init with name
 * return all instructors
-* Student.fail_student should take in a student name and return
+* Instructor.pass_student should take in a student name and test name and return status failed
+* Instructor.fail_student should take in a student name and test name and return status failed
+* Instructor.student_grade_percentage should take in a student first name and output the percentage of tests that they have passed
 
 
 Run ruby tools/console.rb in console to seed
 
 Here is some example seed data:
 
-spongebob= Student.new("Spongebob", "Squarepants")
- patrick= Student.new("Patrick", "Star")
+spongebob= Student.new("Spongebob")
+ patrick= Student.new("Patrick")
 
 puff= Instructor.new("Ms.Puff")
 krabs= Instructor.new("Mr.Krabs")
 
-test1= patrick.add_boating_test("Don't Crash 101", "pending", puff)
+test1= spongebob.add_boating_test("Don't Crash 101", "pending", puff)
