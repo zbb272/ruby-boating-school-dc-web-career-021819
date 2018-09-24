@@ -12,7 +12,7 @@ Associations:
 * should initialize with first_name
 * Student.all should return all of the student instances
 * Student#add_boating_test should initialize a new boating test with a student (Object), a boating test name (String), a boating test status (String), and an Instructor (Object)
-* Student.find_student will take in a student first name and output that student
+* Student.find_student will take in a student first name and output that student (Object)
 
 
 'BoatingTest' class:
@@ -22,7 +22,7 @@ Associations:
 'Instructor' class:
 * init with name
 * return all instructors
-* Instructor.pass_student should take in a student name and test name and return status failed
+* Instructor.pass_student should take in a student name and test name and return status passed
 * Instructor.fail_student should take in a student name and test name and return status failed
 * Instructor.student_grade_percentage should take in a student first name and output the percentage of tests that they have passed
 
