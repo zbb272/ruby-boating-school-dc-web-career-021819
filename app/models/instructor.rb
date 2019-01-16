@@ -13,23 +13,20 @@ attr_accessor :name
     @@all
   end
 
-   def pass_student(student_first_name, test_name)
-    testtopass= BoatingTest.all.find{|test| test.student.first_name == student_first_name && test.name == test_name}
-    puts testtopass
+   def pass_student(student, test_name)
+    testtopass= BoatingTest.all.find{|test| test.student.first_name == student.first_name && test.name == test_name}
     if testtopass
       testtopass.status= "passed"
     else
-      student= Student.all.find{|student| student.first_name == student_first_name}
       BoatingTest.new(student, test_name, "passed", self)
     end
   end
 
-def fail_student(student_first_name, test_name)
-    testtofail= BoatingTest.all.find{|test| test.student.first_name == student_first_name && test.name == test_name}
+def fail_student(student, test_name)
+    testtofail= BoatingTest.all.find{|test| test.student.first_name == student.first_name && test.name == test_name}
     if testtofail
       testtofail.status= "failed"
     else
-      student= Student.all.find{|student| student.first_name == student_first_name}
       BoatingTest.new(student, test_name, "failed", self)
     end
   end
